@@ -1,0 +1,365 @@
+@media (min-width:769px) and (max-width: 1280px) {
+    body .container {
+        max-width: 1200px;
+        padding: 10px;
+    }
+
+     
+    .img_1,
+    .img_2,
+    .img_3,
+    .img_4,
+    .img_5 {
+        width: 100%;
+    } 
+    .img_1 {
+        rotate: -10deg;
+        object-fit: cover;
+        width:80%
+
+    }
+
+    .img_2 {
+        rotate: -5deg;
+    }
+
+    .img_4 {
+        rotate: 5deg;
+    }
+
+    .img_5 {
+        rotate: 10deg;
+    }
+
+
+    .header_menu {
+        width: 350px;
+    }
+    .banner_title {
+        font-size: 50px;
+        width: 100%;
+    }
+    .features {
+        padding: 10px;
+        width: 100%;
+        justify-content: space-around;
+        align-self: stretch;
+    }
+    .circle {
+        width: 22px;
+        height: 22px;
+        border-radius: 50px;
+        align-self: flex-start;
+    }
+    .teachers_text-block {
+        width: 100%;
+
+    }
+
+    .teachers {
+        height: 100%;
+    }
+
+    .teachers_title {
+        text-align: center;
+    }
+
+    .teachers_text-desc {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+
+
+    .schedule_content p {
+        font-size: 28px;
+    }
+    .schedule_content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .schedule_img {
+        width: 100%;
+    }
+    .schedule_img > img {
+        width: 100%;
+        /* object-fit: cover; */
+    }
+
+    .certificate { 
+        padding: 0px;
+    }
+    .certificate_text p {
+        padding: 10px;
+        font-size: 28px;
+        text-align: justify;
+    }
+    
+    .certificate_text {
+        padding: 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .certificate_text > img{ 
+        
+        width: 100%;
+    }
+    .registration {
+        flex-direction: column;
+
+    }
+    .reg_title {
+        font-size: 36px; 
+        text-align: center;
+        margin: 0%;
+        color: #000000;
+        font-variation-settings: 'slnt' 0;
+    }
+    .user_info {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer p {
+        font-size: 16px;
+    } 
+    .foot_elem {
+        padding: 5px;
+    }
+    
+
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .container {
+        max-width: 740px;
+        padding: 10px;
+    }
+
+    .banner {
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .header_menu {
+        /* width: 350px; */
+        width: 80%;
+    }
+
+    .banner_title {
+        font-size: 44px;
+        width: 100%;
+    }
+
+    .info1_imgs {
+        grid-template-areas:
+            "img_3 img_3"
+            "img_1 img_2"
+            "img_4 img_5";
+
+        justify-items: center;
+    }
+
+    .img_1,
+    .img_2,
+    .img_3,
+    .img_4,
+    .img_5 {
+        width: 100%;
+    }
+
+    .img_1 {
+        rotate: -10deg;
+        object-fit: cover;
+    }
+
+    .img_2 {
+        rotate: -5deg;
+    }
+
+    .img_4 {
+        rotate: 5deg;
+    }
+
+    .img_5 {
+        rotate: 10deg;
+    }
+
+    .features {
+        flex-direction: column;
+        justify-content: space-around;
+        align-self: center;
+        gap: 10px;
+    }
+
+    .courses,
+    .basis_training,
+    .teachers,
+    .schedule {
+        padding: 10px;
+    }
+
+    .section_title {
+        font-size: 38px;
+    }
+
+    .course-blocks {
+        grid-template-columns: 1fr;
+    }
+
+    .course_wrapper {
+        width: 90%;
+        flex-direction: row;
+        /* align-items: center; */
+    }
+
+    .course_image {
+        width: 45%;
+    }
+
+    .course_image>img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .course_text {
+        width: 55%;
+    }
+
+    /*.course_text>h3 {
+         align-self: flex-end; 
+    }
+    */
+    .course_text>p {
+        text-align: justify;
+    }
+
+    .course_text>.btn {
+        align-self: flex-end;
+    }
+
+    .training_banner-title {
+        font-size: 35px;
+        line-height: 120%;
+    }
+
+    .training_banner-text {
+        max-width: 90%;
+    }
+
+    .signature_text {
+        font-size: 16px;
+    }
+
+    .teachers_text-block {
+        width: 100%;
+
+    }
+
+    .teachers {
+        height: 100%;
+    }
+
+    .teachers_title {
+        text-align: center;
+    }
+
+    .teachers_text-desc {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .cards {
+        grid-template-columns: 80%;
+        justify-items: center;
+    }
+    .card {
+        flex-direction: row;
+        margin-left: 0;
+        /* width: 60%; */
+    }
+    .card:not(:first-child) {
+        margin-left: 0;
+    }
+
+
+    .card .text  {
+        width: 70%;
+    }
+    .card .image {
+        width: 30%
+    }
+
+    .card img {
+        height: 100%;
+    }
+
+
+    .schedule_content p {
+        font-size: 26px;
+    }
+    .schedule_content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .schedule_img {
+        width: 100%;
+    }
+    .schedule_img > img {
+        width: 100%;
+        /* object-fit: cover; */
+    }
+    .certificate { 
+        padding: 0px;
+    }
+    .certificate_text p {
+        padding: 10px;
+        font-size: 26px;
+        text-align: justify;
+    }
+    
+    .certificate_text {
+        padding: 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .certificate_text > img{ 
+        
+        width: 100%;
+    }
+    .registration {
+        flex-direction: column;
+
+    }
+    .reg_title {
+        font-size: 36px; 
+        text-align: center;
+        margin: 0%;
+        color: #000000;
+        font-variation-settings: 'slnt' 0;
+    }
+    .user_info {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer p {
+        font-size: 16px;
+    } 
+    .foot_elem {
+        padding: 5px;
+    }
+}

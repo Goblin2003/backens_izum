@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<%- include('./partials/head.ejs') %>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <img src="/logo.png" alt="Лого">
+                <div class="header_menu">
+                    <div class="dropdown">
+                        <p class="header-text">
+                            Курсы лазерной эпиляции
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </p>
+                        <%- include('./partials/nav.ejs') %>
+                    </div>
+
+
+                    <a href="#as" class="yakor"><button class="btn" type="button">Запись</button></a>
+                </div>
+
+            </header>
+            <main>
+                <div class="banner">
+                    <h1 class="banner_title">Курс лазерной эпиляции от #IZUM Практикум</h1>
+                    <p class="banner-desc">Готовим к реальной практике</p>
+                    <div class="info1_imgs">
+                        <% if(resultPhotos.length) {%>
+                            <% resultPhotos.forEach(({id, photob, id_class})=> { %>
+                                <div class="image_<%= id %>">
+                                    <img src="<%= photob %>" class="img_<%= id_class %>">
+                                </div>
+                            <% }) %>
+                        <% } %>
+                    </div>
+                    <div class="features">
+                        <div class="features_element">
+                            <div class="circle ball1"></div>
+                            <p class="features_text">Занятие с преподавателем</p>
+                        </div>
+                        <div class="features_element">
+                            <div class="circle ball2"></div>
+                            <p class="features_text">Персональное расписание</p>
+                        </div>
+                        <div class="features_element">
+                            <div class="circle ball3"></div>
+                            <p class="features_text">Платформа где можно записаться</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses">
+                    <h2 class="section_title">Курсы по лазерной эпиляции</h2>
+                    
+                        <div class="course-blocks">
+                            <% if(resultCourses.length) {%>
+                                <% resultCourses.forEach(({id, HeadText, Text, Photo})=> { %>
+                                <div class="course course<%= id %>">
+                                    <div class="course_wrapper">
+                                        <div class="course_image">
+                                            <img src="<%= Photo %>">
+                                        </div>
+                                        <div class="course_text">
+                                            <h3><%= HeadText %></h3>
+                                            <p><%= Text %></p>
+                                            <button class="btn" type="button">Подробнее</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }) %>
+                            <% } %>
+
+                    </div>
+                </div>
+                <div class="basis_training">
+                    <h2 class="section_title">Что лежит в основе нашего обучения</h2>
+                    <div class="training_banner">
+                        <div class="training_banner-text">
+                            <h1 class="training_banner-title">Мы предоставляем практику обучающимся</h1>
+                            <p class="signature_text">Знания - ничто без их пременения.
+                                Именно поэтому мы даем обучающемуся своими руками провести процедуры лазерной эпиляции
+                                под
+                                наставничеством профессионала,
+                                чтобы по завершении образовательной программы косметолог сразу смог приступить к работе.
+                                В основе нашего обучения лежит теоретическая часть и много практики.
+                                В теоретической части вы узнаете все тонкости лазерной эпиляции,
+                                а в практической -закрепите полученные знания.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers">
+                    <div class="teachers_text-block">
+                        <h1 class="section_title teachers_title">Профессионалы. <br> Мастера с большим опытом работы
+                        </h1>
+                        <p class="teachers_text-desc">Все они прошли обучение у нас - понимают как работать с теми,
+                            кто только начинает свой путь мастера лазерной эпиляции</p>
+                    </div>
+
+                    <div class="cards">
+                        <% if(resultTeachers.length) {%>
+                            <% resultTeachers.forEach(({id, text, image})=> { %>
+                                <div class="card theathersName<%=id%>">
+                                    <div class="image">
+                                        <img src="<%= image %>" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p><%= text %></p>
+                    
+                                    </div>
+                                </div>
+                            <% }) %>
+                        <% } %>
+                    </div>
+                   
+                    
+
+                </div>
+                <div class="schedule">
+                    <h2 class="section_title">Персональное расписание</h2>
+                    <div class="schedule_content">
+                        <p>Вы сами выбираете в какой день и время вам будет удобно проходить обучение</p>
+                        <div class="schedule_img">
+                            <img src="/Календарь.png">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="certificate">
+                    <h2 class="section_title">Что вы получите</h2>
+                    <div class="certificate_text">
+                        <p>По итогу обучения вы получите сертификат о прохождении курса.
+                            Также вам будет предоставлена возможность дальнейшего трудоустройства </p>
+                        <img src="/image 14.png">
+                    </div>
+                </div>
+                <div class="registration">
+                    <h1 class="reg_title">Записаться на бесплатную консультацию</h1>
+                    <div class="user_info">
+                        <h1 class="user_info-title">Укажите свои контакты</h1>
+                        <form class="form", id="as" , method="post" , action="/">
+                            <div class="field">
+                                <label for="name">Имя</label>
+                                <input type="text" name="name" width="438.02px" height="40px" />
+                            </div>
+                            <div class="field">
+                                <label for="number">Телефон</label>
+                                <input type="text" name="number" width="438.02px" height="40px" />
+                            </div>
+                            <div class="field">
+                                <label for="mail">E-mail</label>
+                                <input type="text" name="mail" width="438.02px" height="40px" />
+                            </div>
+                            <div class="checks">
+                                <input type="checkbox" id="scales" name="scales" value="ok">
+                                <label for="scales">Я согласен с политикой конфиндециальности</label>
+                            </div>
+                            <div class="checks">
+                                <input type="checkbox" id="sogl" name="sogl" value="ok">
+                                <label for="sogl">Хочу получать полезные письма в разумных количествах</label>
+                            </div>
+                            <div class="buttons">
+                                <img src="/free-icon-weekly-calendar-outline-event-interface-symbol-54332 1.png"
+                                    alt="Кнопка «button»">
+                                <button class="btn" type="submit">Записаться</button>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </main>
+            <%- include('./partials/footer.ejs') %>
+        </div>
+        
+        </script>
+    </body>
+
+</html>

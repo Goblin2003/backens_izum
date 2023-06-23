@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styleAdmin.css">
+</head>
+<body>
+    <div class = "container">   
+        <header>
+            <h1>Панель администратора для добавления мастера</h1>
+        </header>
+        <main>
+            <form action="/admin", method="POST">
+                <div class="label_class">
+                    <label for="text">Введите текст:</label>
+                    <textarea name="text" id="text" cols="30" rows="10"></textarea>  
+                </div>
+                <div  class="label_class">
+                    <label for="text">Выберите Файл</label>
+                    <input name = "file" type="file">
+                </div>
+                <div  class="label_class">
+                    <label for="uid">UID:</label>
+                    <input name="uid" type="text" id="uid"> 
+                </div>
+                <button type="submit">Отправить</button>  
+            </form>
+        </main>
+    </div>   
+   
+
+</body>
+</html>
